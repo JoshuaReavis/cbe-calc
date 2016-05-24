@@ -242,6 +242,16 @@ app.controller('MainCtrl', [
         'IBUS',
         'HRM'
       ];
+      var validclasses = {
+        'MATH': [157],
+        'DSCI': [205],
+        'ACCT': [240,245],
+        'ECON':[206,207],
+        'MIS': [220],
+        'MGMT':[271],
+        'PHYS':[114],
+        'CHEM': [121]
+      }
       var grades = [
         'A',
         'A-',
@@ -271,7 +281,7 @@ app.controller('MainCtrl', [
         //split on space or group of spaces and store in lineArray
         var lineArray = lines[i].trim().split(/\s+/);
 
-        if(headers.indexOf(lineArray[0]) >= 0){
+        if(validclasses[lineArray[0]].indexOf(lineArray[1]) >= 0){
           var tempName = (lineArray[0] + ' ' + lineArray[1]).substring(0, 8)
           var tempGrade;
           var tempCredits;
