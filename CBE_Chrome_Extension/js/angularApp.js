@@ -162,7 +162,7 @@ app.controller('MainCtrl', [
       $scope.gpa = gpa.toFixed(2);
 
       //Adjust academic standing (good, ok, bad)
-      if($scope.gpa > 2.3){
+      if($scope.gpa > 3.0){
         $scope.standing = 'good';
       }else{
         $scope.standing = 'bad';
