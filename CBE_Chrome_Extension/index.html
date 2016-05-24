@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  <input id="toggle" type="checkbox"><label for="toggle"><span class="glyphicon glyphicon-chevron-left"></span></label> <!-- use "&equiv;" without quotations marks for three abr 'menu' symbol -->
+  <input id="toggle" type="checkbox"><label for="toggle"><span class="glyphicon glyphicon-question-sign"></span></label> <!-- use "&equiv;" without quotations marks for three abr 'menu' symbol -->
 
   <div class="slide-menu">
     <div id="menuText">
@@ -34,7 +34,7 @@
           Add a class by typing it's information into the provided fields under the "add a class" header
         </li>
         <li>
-          Removed a class by clicking on the  <span class="glyphicon glyphicon-remove-circle"></span>  next to a class
+          Removed a class by clicking on the  <span class="glyphicon glyphicon-remove"></span>  next to a class
         </li>
         <li>
           Classes become grayed out when a more recent attempt is entered (or detected by our app)
@@ -85,7 +85,7 @@
   	        <div ng-repeat="class in classList track by $index" id="contentRow" ng-class-even="'even'">
               <div class = "col-xs-1" style="text-align:left">
                 <span id=removeIcon
-                  class="glyphicon glyphicon-remove-circle glyphicon-large"
+                  class="glyphicon glyphicon-remove glyphicon-large"
                   ng-click="removeClass(class)"
                 </span>
               </div>
