@@ -281,7 +281,7 @@ app.controller('MainCtrl', [
         //split on space or group of spaces and store in lineArray
         var lineArray = lines[i].trim().split(/\s+/);
 
-        if(validclasses[lineArray[0]].indexOf(lineArray[1]) >= 0){
+        if(validclasses[lineArray[0].substring(0,3)].indexOf(lineArray[1].substring(0,3)) >= 0){
           var tempName = (lineArray[0] + ' ' + lineArray[1]).substring(0, 8)
           var tempGrade;
           var tempCredits;
