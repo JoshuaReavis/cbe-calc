@@ -243,14 +243,14 @@ app.controller('MainCtrl', [
         'HRM'
       ];
       var validclasses = {
-        'MATH': [157],
-        'DSCI': [205],
-        'ACCT': [240,245],
-        'ECON':[206,207],
-        'MIS': [220],
-        'MGMT':[271],
-        'PHYS':[114],
-        'CHEM': [121]
+        'MATH': ['157'],
+        'DSCI': ['205'],
+        'ACCT': ['240','245'],
+        'ECON':['206','207'],
+        'MIS': ['220'],
+        'MGMT':['271'],
+        'PHYS':['114'],
+        'CHEM': ['121']
       }
       var grades = [
         'A',
@@ -281,7 +281,7 @@ app.controller('MainCtrl', [
         //split on space or group of spaces and store in lineArray
         var lineArray = lines[i].trim().split(/\s+/);
 
-        if(validclasses[lineArray[0].substring(0,3)].indexOf(lineArray[1].substring(0,3)) >= 0){
+        if(validclasses.hasOwnProperty(lineArray[0]) && validclasses[lineArray[0]] == lineArray[1].substring(0,3)){
           var tempName = (lineArray[0] + ' ' + lineArray[1]).substring(0, 8)
           var tempGrade;
           var tempCredits;
