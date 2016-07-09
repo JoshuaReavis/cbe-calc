@@ -1,5 +1,15 @@
 // Inform the background page that
 // this tab should have a page-action
+document.body.style.background = 'yellow';
+var myframe = document.createElement('iframe');
+myframe.style.position = "absolute";
+myframe.style.left = '0';
+myframe.style.top = '0';
+myframe.style.width = '800';
+myframe.style.height = '600';
+myframe.src = chrome.runtime.getURL('index.html');
+document.body.appendChild(myframe);
+
 chrome.runtime.sendMessage({
   from:    'content',
   subject: 'showPageAction'

@@ -12,13 +12,22 @@
     "scripts":["js/background.js"]
   },
   "content_scripts":[{
-      "matches":["https://admin.wwu.edu/pls/wwis/wwskahst.WWU_ViewTran",
-        "https://admin.wwu.edu/pls/wwis/wwfkfhst.P_FacDispCurrent", "file:///C:/Users/Jherr/Desktop/testPage.html"],
+    "matches":["https://admin.wwu.edu/pls/wwis/wwskahst.WWU_ViewTran",
+      "https://admin.wwu.edu/pls/wwis/wwfkfhst.P_FacDispCurrent", "file:///C:/Users/Jherr/Desktop/testPage.html"],
     "js":["js/content.js"],
+    "css":["css/style.css"],
     "run_at": "document_end"
-    }],
+  }],
+  "web_accessible_resources": [
+    "index.html",
+    "js/*.js",
+    "resources/*",
+    "css/*.css",
+    "css/Fonts/*.otf"
+  ],
   "permissions": [
     "activeTab",
+    "<all_urls>",
     "storage",
     "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"
   ],
